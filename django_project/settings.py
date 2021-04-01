@@ -16,7 +16,7 @@ import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-TEMPLATE_DIR = os.path.join(BASE_DIR,"templates/stackoverflow")
+TEMPLATE_DIR = os.path.join(BASE_DIR,"stackoverflow/templates/stackoverflow")
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
@@ -33,7 +33,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'stackoverflow.apps.StackoverflowConfig'
+    'stackoverflow',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

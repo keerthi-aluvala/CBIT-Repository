@@ -1,22 +1,58 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel = "stylesheet" type="text/css" href="{% static 'stackoverflow/main.css' %}"> 
+    <script src="/static/stackoverflow/main.js"></script>
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
  </head>
+
  <body>
  	<header class="site-header">
-	    <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
-	        <div class="container">
-	          	<a class="navbar-brand mr-4">Welcome to CBIT STACKOVERFLOW!</a>
+	    <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top"> 	
+	    	<div id="container">
+	    		<div id="main" style="float: left"> 
+	  				<button class="openbtn" onclick="openNav()">&#9776;</button>
+				</div>	
+	          	<a class="navbar-brand mr-4">
+	          		<p style="color: #FAFAD2;">CBIT StackOverflow! &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<i class="fa fa-home"></i>&nbsp; &nbsp;&nbsp;&nbsp;<i class="fa fa-pencil-square-o" aria-hidden="true"></i>&nbsp; &nbsp;&nbsp;&nbsp;<i class="fa fa-plus-square-o" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-bell-o" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-user" aria-hidden="true"></i>
+	          		</p>
+	          		
+	          	</a>
 	        </div>
 	    </nav>
+	    <br><br>
 	</header>
+	
+	<div id="mySidebar" class="sidebar">
+	  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+	  <a href="#">Home</a>
+	  <a href="#">Login</a>
+	  <a href="#">Register</a>
+	  <a href="#">About</a>
+	  <a href="#">Contact</a>
+	</div>
+
+	<div class="container">
+		{% block content %}{% endblock %}
+	</div>
 
  	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+   
  </body>
+
+ <!--
+
+ 	
+ 	search icon: "fa fa-search"Home icon: <i class="fa fa-home"></i>
+
+ -->
